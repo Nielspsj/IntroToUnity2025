@@ -23,7 +23,7 @@ public class SimpleJump : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         // Simple ground check
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("MovingPlatform"))
         {
             isGrounded = true;
         }
