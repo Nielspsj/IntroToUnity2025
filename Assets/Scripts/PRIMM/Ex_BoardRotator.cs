@@ -5,6 +5,9 @@ public class Ex_BoardRotator : MonoBehaviour
     public float rotationAmount = 10f; // How far the board tilts
     public float rotationSpeed = 5f;   // How fast it tilts
 
+    // Variables for the current rotation
+    float rotationX = 0f;
+
     private Quaternion originalRotation;
 
     void Start()
@@ -15,8 +18,7 @@ public class Ex_BoardRotator : MonoBehaviour
 
     void Update()
     {
-        // Variables for the current rotation
-        float rotationX = 0f;
+        
 
         // Use WASD input
         if (Input.GetKey(KeyCode.W))
@@ -31,7 +33,7 @@ public class Ex_BoardRotator : MonoBehaviour
 
 
         // Combine inputs into one rotation
-        Quaternion targetRotation = originalRotation * Quaternion.Euler(rotationX, 0f, 0f);
+        Quaternion targetRotation = Quaternion.Euler(rotationX, 0f, 0f);
 
         // Smoothly rotate toward the target rotation
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
