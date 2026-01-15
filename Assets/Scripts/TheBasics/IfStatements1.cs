@@ -5,6 +5,7 @@ using UnityEngine;
 public class IfStatements1 : MonoBehaviour
 {
     //If statement
+    //Assignment: Add en "else"-condition to the if-statement
 
     public bool hasDungeonKey = true;
     // Start is called before the first frame update

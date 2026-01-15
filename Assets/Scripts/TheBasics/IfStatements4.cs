@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class IfStatements4 : MonoBehaviour
 {
-    //Nesting statements
+    //Nested statement
+    //Assignment: Add multiple conditions in an if-statement.
+    //Check both that the weapon is equiped and that the weaponType is a "Longsword" in the same condition.
 
     public bool weaponEquipped = true;
     public string weaponType = "Longsword";

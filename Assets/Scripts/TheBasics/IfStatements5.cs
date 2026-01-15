@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class IfStatements5 : MonoBehaviour
 {
-    //Multiple conditions
+    //Assignement: See PDF on Facilis called Conditionals
+
+
+    //Multiple conditions in an if-statement
 
     public bool weaponEquipped = true;
     public string weaponType = "Longsword";

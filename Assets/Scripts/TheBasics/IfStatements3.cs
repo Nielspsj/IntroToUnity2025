@@ -5,6 +5,8 @@ using UnityEngine;
 public class IfStatements3 : MonoBehaviour
 {
     //NOT operator
+    //Assignment: Check in an if-statement if a weapon is equipped.
+    //Then inside that if-statment check if the weaponType is a "Longsword".
 
     public bool hasDungeonKey = false;
     public string weaponType = "Arcante Staff";
