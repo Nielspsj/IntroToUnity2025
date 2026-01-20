@@ -778,6 +778,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightFlipper
       objectReference: {fileID: 0}
+    - target: {fileID: 1932531817787967366, guid: 4cac640e479b3174ea664ef552ec1b4e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5975799547303717379, guid: 4cac640e479b3174ea664ef552ec1b4e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.2871137
