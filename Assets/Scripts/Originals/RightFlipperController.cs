@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class RightFlipperController : MonoBehaviour {
 
+    //Almost exactly the same as the LeftFlipperController
     public float restPosition_F = 0f;
     public float pressedPosition_F = 45f;
-    public float hitStrength_F = 10000f;
+    public float hitStrength_F = 100000f;
     public float flipperDamper_F = 150f;
 
     private HingeJoint hinge_HJ;
@@ -31,9 +32,8 @@ public class RightFlipperController : MonoBehaviour {
         spring_JS.spring = hitStrength_F;
         spring_JS.damper = flipperDamper_F;
 
-        if(Input.GetKey(KeyCode.RightArrow))
+        if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
-            Debug.Log("hitting right arrow");
             spring_JS.targetPosition = pressedPosition_F;
         }
         else

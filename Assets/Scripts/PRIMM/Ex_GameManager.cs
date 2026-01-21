@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement; // Needed for reloading scenes
 public class Ex_GameManager : MonoBehaviour
 {
     public int ballsLeft = 3; // How many balls you start with
-    public GameObject ballPrefab;
-    public Transform spawnPoint;
+    [SerializeField] private GameObject ballPrefab;
+    [SerializeField] private Transform spawnPoint;
 
     // Run when we lose a ball. Spawn new ball or reset the scene.
     public void BallLost()

@@ -7,14 +7,14 @@ public class LeftFlipperManager : MonoBehaviour
     public float hitStrength = 10000f;
     public float flipperDamper = 150f;
 
-    private HingeJoint hingeJoint;
+    private HingeJoint curHingeJoint;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        hingeJoint = GetComponent<HingeJoint>();
-        hingeJoint.useSpring = true;
+        curHingeJoint = GetComponent<HingeJoint>();
+        curHingeJoint.useSpring = true;
     }
 
     // Update is called once per frame
@@ -39,7 +39,7 @@ public class LeftFlipperManager : MonoBehaviour
             spring.targetPosition = restPosition;
         }
 
-        hingeJoint.spring = spring;
-        hingeJoint.useLimits = true;
+        curHingeJoint.spring = spring;
+        curHingeJoint.useLimits = true;
     }
 }

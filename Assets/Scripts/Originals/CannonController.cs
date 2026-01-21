@@ -3,20 +3,21 @@ using System.Collections;
 using System.Xml.Serialization;
 
 public class CannonController : MonoBehaviour {
-	
-	public float deltaAngle = 1.0f;
-	float elevationAngle = 0.0f;  //up and down
-	float turnAngle = 0.0f; //right and left
-	float speed = 2.0f;
-	public float muzzleVelocity;
-	public GameObject cannonBallPrefab;    
+
+    [SerializeField] private float deltaAngle = 1.0f;
+	private float elevationAngle = 0.0f;  //up and down
+    private float turnAngle = 0.0f; //right and left
+    [SerializeField] private float speed = 2.0f;
+
+
+    [SerializeField] private float muzzleVelocity;
+    [SerializeField] private GameObject cannonBallPrefab;    
 	
 	
 	// Update is called once per frame
 	void Update () 
 	{
         CannonInputs();
-        FireCannon();
     }
 
     //the keys that we use to control and shoot
@@ -39,7 +40,7 @@ public class CannonController : MonoBehaviour {
         {
             turnAngle += deltaAngle;
         }
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             FireCannon();
         }
