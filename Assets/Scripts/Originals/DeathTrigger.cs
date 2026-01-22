@@ -10,11 +10,11 @@ public class DeathTrigger : MonoBehaviour
         // Check if the object entering is the ball
         if (other.CompareTag("Ball"))
         {
-            // Tell the GameManager the ball is lost
-            gameManager.BallLost();
-
             // Destroy the ball so it disappears
             Destroy(other.gameObject);
+
+            // Tell the GameManager the ball is lost
+            gameManager.BallLost();       
         }
     }
 }

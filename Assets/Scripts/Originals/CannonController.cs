@@ -53,7 +53,7 @@ public class CannonController : MonoBehaviour {
 	void FireCannon() 
     {		
 		GameObject muzzle = GameObject.Find("Muzzle");
-		GameObject cannonBall = (GameObject)Instantiate(cannonBallPrefab, muzzle.transform.position, muzzle.transform.rotation);
+		GameObject cannonBall = Instantiate(cannonBallPrefab, muzzle.transform.position, muzzle.transform.rotation);
 		cannonBall.transform.GetComponent<Rigidbody>().linearVelocity = muzzle.transform.forward*muzzleVelocity;
 	}
 }
