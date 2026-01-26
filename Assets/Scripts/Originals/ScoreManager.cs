@@ -26,7 +26,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = "Score: " + score;
+            scoreText.text = "Score: " + score.ToString(); ;
 
             PopScoreText();
         }
@@ -35,17 +35,13 @@ public class ScoreManager : MonoBehaviour
     // Super simple pop effect method
     void PopScoreText()
     {
-        if (scoreText != null)
-        {
-            scoreText.transform.localScale = originalSize * popSize; // Grow text
-            Invoke("ResetScoreTextSize", popTime);             // Reset after a short delay
-        }
+        scoreText.transform.localScale = originalSize * popSize; // Grow text
+        Invoke("ResetScoreTextSize", popTime);             // Reset after a short delay
     }
 
     // Resets the text to its original size
     void ResetScoreTextSize()
     {
-        if (scoreText != null)
-            scoreText.transform.localScale = originalSize;
+        scoreText.transform.localScale = originalSize;
     }
 }
