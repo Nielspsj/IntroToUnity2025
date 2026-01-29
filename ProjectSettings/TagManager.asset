@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - MovingPlatform
+  - Ball
+  - ScoreManagerTag
   layers:
   - Default
   - TransparentFX
