@@ -2,16 +2,18 @@ using UnityEngine;
 
 public class Plunger : MonoBehaviour
 {
+    [SerializeField] private GameManager gameManager;
     [SerializeField] private float ballSpeed;
     [SerializeField] private GameObject ballPrefab;
 
- 
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && gameManager.canSpawnBall == true)
         {
             FireCannon();
+            gameManager.canSpawnBall = false;
         }
     }
 

@@ -2,28 +2,17 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioSource musicSource;   // For background music
-    public AudioSource sfxSource;     // For sound effects
-
-    public AudioClip backgroundMusic; // The main music track
+    [SerializeField] private AudioSource backGroundMusic_AS;
+    [SerializeField] private AudioSource SFX_AS;
 
     void Start()
     {
-        // Play background music at start
-        if (musicSource != null && backgroundMusic != null)
-        {
-            musicSource.clip = backgroundMusic;
-            musicSource.loop = true;
-            musicSource.Play();
-        }
+        backGroundMusic_AS.Play();
     }
 
     // Call this from other scripts to play a sound effect
     public void PlaySFX(AudioClip clip)
     {
-        if (sfxSource != null && clip != null)
-        {
-            sfxSource.PlayOneShot(clip);
-        }
+        SFX_AS.PlayOneShot(clip);
     }
 }

@@ -12,10 +12,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text ballCountText;
     [SerializeField] private GameObject gameOverScreen;
 
+    public bool canSpawnBall = true;
+
     private void Start()
     {
         ballCountText.text = ballsLeft.ToString();
-        Debug.Log("ballsleft: " + ballsLeft);
+        //Debug.Log("ballsleft: " + ballsLeft);
+        canSpawnBall = true;
     }
 
     public void BallLost()
@@ -27,6 +30,7 @@ public class GameManager : MonoBehaviour
         {
             // Spawn a new ball
             //Instantiate(ballPrefab, spawnPoint.position, spawnPoint.rotation);
+            canSpawnBall = true;
         }
         else
         {

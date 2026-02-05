@@ -27,6 +27,6 @@ public class ScoreManager : MonoBehaviour
         
         totalScoreText.text = curTotalScore.ToString();
 
-        Debug.Log(curTotalScore);
+        //Debug.Log(curTotalScore);
     }
 }
