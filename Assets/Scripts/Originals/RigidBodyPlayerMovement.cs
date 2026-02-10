@@ -35,6 +35,7 @@ public class RigidbodyPlayerMovement : MonoBehaviour
             // Rotate left/right
             transform.Rotate(Vector3.up * turn * currentRotationSpeed * Time.fixedDeltaTime);
         }
+        /*
         else
         {
             //Debug.Log("NO input");
@@ -46,5 +47,6 @@ public class RigidbodyPlayerMovement : MonoBehaviour
         playerRigidBody.constraints = RigidbodyConstraints.FreezeRotationX;
         frozenRotation.y = transform.eulerAngles.y;
         transform.eulerAngles = frozenRotation;
+        */
     }
 }
