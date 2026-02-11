@@ -25,7 +25,7 @@ public class RigidbodyPlayerMovement : MonoBehaviour
         float turn = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");        
 
-        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0 || Input.GetKeyDown(KeyCode.Space))
         {
             //Debug.Log("input: " + Input.GetAxis("Horizontal") + " - " + Input.GetAxis("Vertical"));
             // Move forward in the player's facing direction

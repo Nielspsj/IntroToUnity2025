@@ -18,8 +18,8 @@ public class TransformMovement : MonoBehaviour
     void Update()
     {
         //store inputs
-        float vInput = Input.GetAxis("Vertical");
-        float hInput = Input.GetAxis("Horizontal");
+        vInput = Input.GetAxis("Vertical");
+        hInput = Input.GetAxis("Horizontal");
 
         transform.Translate(Vector3.forward * vInput * moveSpeed * Time.deltaTime);
         transform.Rotate(Vector3.up * hInput * rotationSpeed * Time.deltaTime);
