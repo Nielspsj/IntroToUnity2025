@@ -12,10 +12,10 @@ public class PlayerController : MonoBehaviour
     //vTest 7: Add jump force upwards in y axis on movedirection when we hit space
 
 
-    [SerializeField] float moveSpeed = 10f;
-    [SerializeField] float rotationSpeed = 20f;
-    [SerializeField] float gravity = -9.8f;
-    [SerializeField] float jumpForce = 5f;
+    [SerializeField] private float moveSpeed = 10f;
+    [SerializeField] private float rotationSpeed = 20f;
+    [SerializeField] private float gravity = -9.8f;
+    [SerializeField] private float jumpForce = 5f;
 
     private CharacterController playerCharCtrler;
 
